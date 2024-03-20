@@ -1,0 +1,752 @@
+2024-03-10 23:14:32.468-04:00 WARN  c.a.c.h.netty.implementation.Utility - The following Netty dependencies have versions that do not match the versions specified in the azure-core-http-netty pom.xml file. This may result in unexpected behavior. If your application runs without issue this message can be ignored, otherwise please update the Netty dependencies to match the versions specified in the pom.xml file. Versions found in runtime: 'io.netty:netty-common' version not found (expected: 4.1.101.Final),'io.netty:netty-handler' version not found (expected: 4.1.101.Final),'io.netty:netty-handler-proxy' version not found (expected: 4.1.101.Final),'io.netty:netty-buffer' version not found (expected: 4.1.101.Final),'io.netty:netty-codec' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http2' version not found (expected: 4.1.101.Final)
+2024-03-10 23:14:33.091-04:00 INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.5.0 started successfully (PID 38563, JVM running for 1.389 s)
+2024-03-10 23:14:33.092-04:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.9, vendor: Homebrew, home: /opt/homebrew/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home
+2024-03-10 23:15:54.801-04:00 WARN  c.a.c.h.netty.implementation.Utility - The following Netty dependencies have versions that do not match the versions specified in the azure-core-http-netty pom.xml file. This may result in unexpected behavior. If your application runs without issue this message can be ignored, otherwise please update the Netty dependencies to match the versions specified in the pom.xml file. Versions found in runtime: 'io.netty:netty-common' version not found (expected: 4.1.101.Final),'io.netty:netty-handler' version not found (expected: 4.1.101.Final),'io.netty:netty-handler-proxy' version not found (expected: 4.1.101.Final),'io.netty:netty-buffer' version not found (expected: 4.1.101.Final),'io.netty:netty-codec' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http2' version not found (expected: 4.1.101.Final)
+2024-03-10 23:15:55.409-04:00 INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.5.0 started successfully (PID 38626, JVM running for 1.6 s)
+2024-03-10 23:15:55.410-04:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.9, vendor: Homebrew, home: /opt/homebrew/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home
+2024-03-10 23:40:24.691-04:00 WARN  c.a.c.h.netty.implementation.Utility - The following Netty dependencies have versions that do not match the versions specified in the azure-core-http-netty pom.xml file. This may result in unexpected behavior. If your application runs without issue this message can be ignored, otherwise please update the Netty dependencies to match the versions specified in the pom.xml file. Versions found in runtime: 'io.netty:netty-common' version not found (expected: 4.1.101.Final),'io.netty:netty-handler' version not found (expected: 4.1.101.Final),'io.netty:netty-handler-proxy' version not found (expected: 4.1.101.Final),'io.netty:netty-buffer' version not found (expected: 4.1.101.Final),'io.netty:netty-codec' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http' version not found (expected: 4.1.101.Final),'io.netty:netty-codec-http2' version not found (expected: 4.1.101.Final)
+2024-03-10 23:40:25.310-04:00 INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.5.0 started successfully (PID 44059, JVM running for 1.398 s)
+2024-03-10 23:40:25.311-04:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.9, vendor: Homebrew, home: /opt/homebrew/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home
+2024-03-10 23:51:21.647-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - Pinging live metrics endpoint: java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (future warnings will be aggregated and logged once every 5 minutes)
+reactor.core.Exceptions$ReactiveException: java.net.SocketException: Connection reset
+	at reactor.core.Exceptions.propagate(Exceptions.java:408)
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:101)
+	at reactor.core.publisher.Mono.block(Mono.java:1712)
+	at com.azure.monitor.opentelemetry.exporter.implementation.quickpulse.QuickPulsePingSender.ping(QuickPulsePingSender.java:102)
+	at com.azure.monitor.opentelemetry.exporter.implementation.quickpulse.QuickPulseCoordinator.ping(QuickPulseCoordinator.java:100)
+	at com.azure.monitor.opentelemetry.exporter.implementation.quickpulse.QuickPulseCoordinator.run(QuickPulseCoordinator.java:53)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:103)
+		... 5 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2024-03-10 23:51:24.582-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - Sending telemetry to the ingestion service: Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (future warnings will be aggregated and logged once every 5 minutes)
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-03-11 00:31:42.019-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 116): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-11 00:31:44.950-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 25): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-11 01:47:03.266-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-11 01:47:06.204-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-11 01:47:31.309-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - Sending telemetry to the ingestion service (retry from disk): Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (future warnings will be aggregated and logged once every 5 minutes)
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-03-11 06:02:36.316-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 11 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (11 times)
+2024-03-11 06:02:39.245-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-11 06:03:04.334-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-11 07:43:19.440-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 5 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (5 times)
+2024-03-11 07:43:22.369-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-11 07:43:47.457-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-11 09:52:05.842-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 57): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-11 09:52:08.769-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+ * Connection has been closed BEFORE response, while sending request body (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-11 12:08:49.239-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-11 12:08:52.164-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-11 12:09:17.247-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-11 13:23:31.011-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-11 13:23:33.929-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-11 14:59:25.568-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-11 14:59:28.473-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-11 14:59:53.556-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-11 16:35:36.355-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-11 17:23:19.389-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-11 17:23:22.299-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-11 17:23:47.379-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-11 19:35:46.163-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-11 19:35:49.082-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-11 20:01:05.935-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-11 20:37:14.014-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-11 20:37:16.935-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-11 21:09:08.274-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-11 21:09:11.206-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-11 21:09:55.605-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-11 21:37:09.670-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-11 21:37:12.594-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-11 23:27:55.188-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-12 00:08:41.860-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-12 00:08:44.784-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-12 01:16:22.055-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 02:37:15.223-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 8 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (8 times)
+2024-03-12 02:37:18.145-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (6 times)
+2024-03-12 02:52:43.130-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 07:06:03.530-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 10 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (10 times)
+2024-03-12 07:06:06.444-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 07:06:31.460-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 09:24:12.521-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-12 09:35:50.067-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 09:36:15.081-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 11:54:12.741-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-12 11:54:15.654-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 11:56:32.500-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-12 14:41:05.101-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-12 14:41:08.011-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 14:41:33.042-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 16:58:55.707-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-12 16:58:58.623-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 17:44:02.540-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 20:07:24.762-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-12 20:07:27.673-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-12 20:09:35.075-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-12 20:47:30.382-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-12 20:47:33.292-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-12 21:02:58.538-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-12 21:21:04.062-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-12 21:21:32.008-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 2): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-13 00:15:24.218-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 55): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-13 00:15:27.087-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 03:33:59.623-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 9 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (9 times)
+2024-03-13 03:34:02.489-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 03:54:50.709-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (4 times)
+2024-03-13 08:43:35.860-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 12 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (12 times)
+2024-03-13 08:43:38.715-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-13 08:44:03.775-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (4 times)
+2024-03-13 13:22:16.736-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 12 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (12 times)
+2024-03-13 13:26:34.433-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 10 times (out of 10): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (10 times)
+2024-03-13 17:12:22.192-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 9 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (9 times)
+2024-03-13 17:12:25.038-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-13 17:30:29.158-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (4 times)
+2024-03-13 17:52:22.473-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-13 17:52:25.312-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 17:52:50.382-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-13 18:54:29.485-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-13 18:54:32.320-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 18:54:57.391-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-13 19:00:42.350-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 19:23:48.834-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 1): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-13 19:28:20.936-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-13 20:08:23.757-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 20:23:23.753-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 20:43:23.711-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 21:40:46.954-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 55): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-13 21:40:49.796-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 21:41:14.858-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-13 21:50:49.798-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 22:00:49.828-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 22:15:49.860-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 22:35:49.896-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 22:40:49.909-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-13 22:45:49.918-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-13 22:50:49.921-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-13 22:55:49.928-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 23:00:49.935-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 23:15:49.961-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-13 23:20:49.969-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection prematurely closed BEFORE response (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 01:42:02.478-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 53): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-14 01:59:41.319-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 03:05:23.193-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (3 times)
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-14 10:34:46.237-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 13 times (out of 44): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (9 times)
+ * io.netty.channel.AbstractChannel$AnnotatedConnectException: Operation timed out: rt.services.visualstudio.com/23.100.122.113:443 (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+ * java.io.IOException: Operation timed out (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-14 10:34:49.082-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-14 11:28:22.122-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 7 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (7 times)
+2024-03-14 13:49:02.811-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 50): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+ * java.io.IOException: Operation timed out (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-14 14:05:56.367-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 9): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-14 14:06:21.429-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-14 16:59:32.213-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 8 times (out of 50): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (8 times)
+2024-03-14 16:59:35.051-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-14 17:00:00.089-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-14 17:04:32.218-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 48): Pinging live metrics endpoint:
+ * java.util.concurrent.TimeoutException: Channel response timed out after 60000 milliseconds. (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-14 17:14:32.218-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 46): Pinging live metrics endpoint:
+ * java.util.concurrent.TimeoutException: Channel response timed out after 60000 milliseconds. (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-14 17:14:35.055-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 11): Sending telemetry to the ingestion service:
+ * Channel response timed out after 60000 milliseconds. (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-14 20:11:59.284-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-14 20:12:02.114-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 20:31:33.174-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-14 21:10:23.330-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-14 21:10:26.150-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 21:10:51.188-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-14 21:34:32.518-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-14 21:34:35.331-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 21:35:00.373-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-14 23:29:00.125-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-14 23:29:02.947-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-14 23:32:28.608-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-15 01:53:11.164-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-15 01:53:13.978-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-15 01:53:39.006-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-15 04:47:48.126-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 8 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (8 times)
+2024-03-15 04:47:50.938-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-15 05:35:59.885-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-15 07:20:23.655-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 8 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (8 times)
+2024-03-15 07:20:26.466-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-15 07:52:21.901-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 9): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (6 times)
+2024-03-15 08:24:47.241-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-15 08:24:50.047-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-15 12:52:26.950-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-15 12:52:29.739-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-15 12:52:54.780-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-15 17:27:08.794-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-15 17:27:11.560-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 00:25:33.746-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 17 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (17 times)
+2024-03-16 00:25:36.515-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (6 times)
+2024-03-16 00:28:55.223-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 9): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (5 times)
+2024-03-16 00:33:27.405-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 01:16:31.154-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 01:16:33.936-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 01:45:38.423-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 01:45:41.200-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 09:44:05.125-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 16 times (out of 57): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (16 times)
+2024-03-16 09:44:07.893-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 09:44:32.937-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 7 times (out of 9): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (7 times)
+2024-03-16 10:45:56.337-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 10:45:59.109-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 12:18:56.986-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-16 12:18:59.761-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 12:19:24.810-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 12:38:20.805-04:00 ERROR c.a.m.o.e.i.q.QuickPulsePingSender - 
+*************************
+Application Insights Java failed to connect to https://rt.services.visualstudio.com/QuickPulseService.svc
+*************************
+
+Description:
+Unable to resolve host in url
+
+Action:
+Please update your network configuration so that the host in this url can be resolved: https://rt.services.visualstudio.com/QuickPulseService.svc
+Learn more about troubleshooting unknown host exception here: https://go.microsoft.com/fwlink/?linkid=2185830
+
+Note:
+This message is only logged the first time it occurs after startup.
+
+2024-03-16 12:53:51.673-04:00 ERROR c.a.m.o.e.i.p.TelemetryPipeline - 
+*************************
+Application Insights Java failed to connect to https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track
+*************************
+
+Description:
+Unable to resolve host in url
+
+Action:
+Please update your network configuration so that the host in this url can be resolved: https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track
+Learn more about troubleshooting unknown host exception here: https://go.microsoft.com/fwlink/?linkid=2185830
+
+Note:
+This message is only logged the first time it occurs after startup.
+
+2024-03-16 12:53:54.537-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 49): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+ * java.io.IOException: Operation timed out (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 13:10:02.126-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 8): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 13:51:04.437-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 1): Sending telemetry to the ingestion service (retry from disk):
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 14:07:50.931-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 47): Pinging live metrics endpoint:
+ * java.util.concurrent.TimeoutException: Channel response timed out after 60000 milliseconds. (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 14:07:53.710-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 17:12:12.637-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 52): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+ * java.io.IOException: Operation timed out (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 17:12:15.417-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 17:19:22.849-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+ * Operation timed out (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 17:24:14.422-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 17:24:17.206-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-16 18:16:24.345-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-16 18:16:27.125-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-16 18:54:30.396-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-16 18:54:33.174-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 18:54:58.230-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 19:16:09.237-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 60): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-16 19:16:12.005-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 20:42:09.405-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-16 20:42:12.172-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-16 20:57:37.286-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 21:19:25.918-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-16 21:19:28.677-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-16 21:19:53.752-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 21:43:43.840-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-16 21:43:46.593-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-16 22:42:50.375-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-16 22:42:53.116-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-16 22:43:18.207-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-16 23:05:22.742-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-16 23:05:25.480-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-16 23:28:04.893-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-16 23:28:07.630-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-17 00:03:05.032-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 00:03:07.763-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 00:28:52.814-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 00:28:55.545-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 01:04:56.027-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 01:04:58.747-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-17 01:12:09.478-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-17 01:12:12.191-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 01:48:41.939-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 01:48:44.651-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 01:49:09.744-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 01:58:12.299-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 01:58:15.011-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 02:49:57.323-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-17 02:50:00.024-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 03:26:02.504-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 03:26:05.205-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 03:26:30.298-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 04:01:54.194-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 04:01:56.894-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 04:37:50.200-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 04:37:52.898-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-17 05:13:30.472-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 05:13:33.168-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-17 06:01:37.973-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-17 06:01:40.669-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 06:17:22.681-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-17 07:40:47.659-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-17 07:40:50.352-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-17 07:41:15.431-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 08:36:35.158-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-17 08:51:37.833-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 08:52:02.906-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (3 times)
+2024-03-17 09:01:17.890-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 09:01:45.645-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (3 times)
+2024-03-17 11:29:01.515-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 11:29:04.173-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 11:46:37.152-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 12:05:14.898-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-17 12:05:17.551-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-17 13:23:13.878-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 13:23:16.524-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 14:12:02.651-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-17 15:38:22.078-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-17 15:38:24.737-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 15:41:03.430-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (5 times)
+2024-03-17 16:06:26.690-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-17 16:06:29.349-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-17 16:36:51.814-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-17 16:46:36.219-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-17 16:46:38.871-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 19:32:36.328-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-17 19:32:38.985-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 19:33:04.051-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 21:43:09.076-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-17 21:43:11.728-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 21:46:12.041-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (3 times)
+2024-03-17 23:01:47.374-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 5 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (5 times)
+2024-03-17 23:01:50.020-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-17 23:02:15.073-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-17 23:11:38.184-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-17 23:11:40.829-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 23:58:13.812-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-17 23:58:16.452-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-17 23:58:41.500-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 1): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-18 02:16:10.251-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-18 02:16:12.890-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 02:47:34.678-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-18 06:02:08.057-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 8 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (8 times)
+2024-03-18 06:02:10.686-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 06:06:18.450-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (6 times)
+2024-03-18 07:01:43.483-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-18 07:01:46.114-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 07:02:11.178-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (3 times)
+2024-03-18 09:04:57.979-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 5 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (5 times)
+2024-03-18 09:05:00.603-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-18 12:53:16.622-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-18 12:53:19.239-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 12:53:44.330-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-18 13:21:38.369-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-18 13:21:40.978-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 13:22:06.079-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-18 15:35:59.523-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-18 15:36:02.124-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-18 16:07:21.395-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-18 16:45:32.197-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-18 16:45:34.802-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-18 16:45:59.908-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-18 16:50:32.245-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-18 17:10:32.271-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 1 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (1 times)
+2024-03-18 17:10:34.857-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection has been closed BEFORE response, while sending request body (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-18 17:10:59.972-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-18 19:39:33.260-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-18 19:39:35.842-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-18 19:40:00.959-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 8): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (4 times)
+2024-03-18 22:33:42.254-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-18 22:33:44.816-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-18 22:34:09.928-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 4): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-19 00:09:58.962-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-19 02:33:49.238-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-19 02:33:51.811-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-19 02:34:16.919-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-19 05:35:33.496-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-19 05:35:36.066-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (6 times)
+2024-03-19 05:53:45.840-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-19 08:30:34.886-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-19 08:30:37.454-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+ * Connection has been closed BEFORE response, while sending request body (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (1 times)
+2024-03-19 08:31:02.559-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 7): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-19 11:52:50.164-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 7 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (7 times)
+2024-03-19 11:52:52.742-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-19 14:09:10.428-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 6 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (6 times)
+2024-03-19 14:09:13.003-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-19 14:09:38.121-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (2 times)
+2024-03-19 17:18:35.902-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 10 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (10 times)
+2024-03-19 17:18:38.472-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 6 times (out of 9): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (6 times)
+2024-03-19 18:15:50.571-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-19 18:15:53.132-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 2 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (2 times)
+2024-03-19 18:40:16.166-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 2 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (2 times)
+2024-03-19 18:40:18.725-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 3 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (3 times)
+2024-03-19 18:40:43.852-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 3): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-19 20:19:55.123-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-19 20:19:57.683-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-19 20:20:22.805-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 6): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
+2024-03-19 21:09:17.637-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 4 times (out of 58): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (4 times)
+2024-03-19 21:09:20.195-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 5 times (out of 10): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (5 times)
+2024-03-19 21:48:08.550-04:00 WARN  c.a.m.o.e.i.q.QuickPulsePingSender - In the last 5 minutes, the following operation has failed 3 times (out of 59): Pinging live metrics endpoint:
+ * java.net.SocketException: Connection reset (https://rt.services.visualstudio.com/QuickPulseService.svc) (3 times)
+2024-03-19 21:48:49.731-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 4 times (out of 11): Sending telemetry to the ingestion service:
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (telemetry will be stored to disk and retried) (4 times)
+2024-03-19 21:49:14.851-04:00 WARN  c.a.m.o.e.i.p.TelemetryPipeline - In the last 5 minutes, the following operation has failed 1 times (out of 5): Sending telemetry to the ingestion service (retry from disk):
+ * Connection reset (https://canadaeast-0.in.applicationinsights.azure.com/v2.1/track) (will be retried again) (1 times)
